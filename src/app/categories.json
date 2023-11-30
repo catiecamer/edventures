@@ -1,0 +1,40 @@
+{
+  "categories": [
+    {
+      "broadCategory": "Startup essentials",
+      "specificCategory": [
+        {
+          "title": "Business Idea Generation",
+          "question": 10
+        },
+        { "title": "Market Research and Analysis", "question": 10 },
+        { "title": "Registering Your Business", "question": 3 },
+        { "title": "The Lean Startup Essentials", "question": 12 }
+      ]
+    },
+    {
+      "broadCategory": "Marketing mastery",
+      "specificCategory": [
+        {
+          "title": "Branding",
+          "question": 2
+        },
+        { "title": "SEO Marketing", "question": 10 },
+        { "title": "Digital Marketing", "question": 3 },
+        { "title": "Social Media and Business Impacts", "question": 12 }
+      ]
+    },
+    {
+      "broadCategory": "Finance fundamentals",
+      "specificCategory": [
+        {
+          "title": "Budgeting & Resource Allocation",
+          "question": 10
+        },
+        { "title": "Balance Sheet and Income Statements", "question": 10 },
+        { "title": "Funding Options", "question": 3 },
+        { "title": "Planning & Financial Strategy", "question": 12 }
+      ]
+    }
+  ]
+}

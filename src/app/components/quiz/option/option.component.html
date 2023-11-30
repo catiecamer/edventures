@@ -1,0 +1,15 @@
+<div class="container">
+  <div
+    *ngFor="let option of QuizService.options"
+    (click)="clickEvent(option)"
+    [ngClass]="QuizService.status == option ? 'selected' : 'unselected'"
+    [ngClass]="
+      option == QuizService.answer && QuizService.isCorrect == false
+        ? 'showCorrectAnswer'
+        : 'option'
+    "
+    class="option"
+  >
+    {{ option }}
+  </div>
+</div>

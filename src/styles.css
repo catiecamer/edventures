@@ -1,1 +1,82 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  height: 100vh;
+  width: 100vw;
+}
+
+body {
+  margin: 0 !important;
+  padding: 0;
+  background: var(--primary-blue-lighter);
+  height: 100vh;
+  width: 100vw;
+}
+
+@font-face {
+  font-family: "satoshi-medium";
+  src: url("../assets/fonts/Satoshi-Medium.otf");
+}
+
+@font-face {
+  font-family: "satoshi-regular";
+  src: url("../assets/fonts/Satoshi-Regular.otf");
+}
+
+@font-face {
+  font-family: "generalSans-medium";
+  src: url("../assets/fonts/GeneralSans-Medium.otf");
+}
+
+@font-face {
+  font-family: "generalSans-regular";
+  src: url("../assets/fonts/GeneralSans-Regular.otf");
+}
+
+@font-face {
+  font-family: "generalSans-bold";
+  src: url("../assets/fonts/GeneralSans-Bold.otf");
+}
+
+:root {
+  --primary-blue: #163dfa;
+  --primary-blue-dark: #021ea7;
+  --primary-blue-darker: #000c40;
+  --primary-blue-teal: #6bbbf5;
+  --primary-blue-teal-dark: #007cc4;
+  --primary-blue-light: #bddff2;
+  --primary-blue-lighter: #f2f8fb;
+  --primary-magenta: #bd37d0;
+  --primary-magenta-dark: #9e01b4;
+  --primary-magenta-darker: #540060;
+  --primary-magenta-light: #f29afe;
+  --primary-magenta-lighter: #f2ebf3;
+  --neutral-50: #f7f9fd;
+  --neutral-100: #d9e3f2;
+  --neutral-200: #c8d5ea;
+  --neutral-300: #a9bad6;
+  --neutral-400: #8b9fc1;
+  --neutral-500: #7084a9;
+  --neutral-600: #566b8f;
+  --neutral-700: #334155;
+  --neutral-800: #263140;
+  --neutral-900: #131820;
+  --error-dark: #c50b0b;
+  --error-light: #f9e3e3;
+  --error-medium: #eaa6a6;
+  --error: #e50e0e;
+  --success-dark: #195a02;
+  --success-light: #cfecc7;
+  --success: #5fed2e;
+  --yellow-light: #fdeb88;
+  --yellow-dark: #cb9902;
+  --shades-white: #ffffff;
+  --shades-black: #000000;
+  --twenty: 25px;
+  --sixteen: 21px;
+  --seventeen: 22px;
+  --fifteen: 20px;
+  --thirtyfour: 41px;
+  --twelve: 16px;
+  --twentytwo: 28px;
+  --twentyeight: 34px;
+}

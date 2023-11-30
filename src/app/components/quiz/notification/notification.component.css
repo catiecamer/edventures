@@ -1,0 +1,32 @@
+.isCorrect {
+  padding: 16px;
+  margin: 8px 0px 0 0px;
+  font-family: "generalSans-medium";
+  color: var(--success-dark);
+  font-size: 17px;
+  line-height: var(--seventeen);
+  border-color: var(--success);
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: var(--success-light);
+}
+
+.isIncorrect {
+  padding: 16px 16px;
+  margin: 8px 0px 0 0px;
+  font-family: "generalSans-medium";
+  color: var(--error-dark);
+  font-size: 17px;
+  line-height: var(--seventeen);
+  border-color: var(--error);
+  border-radius: 16px;
+  border-width: 1px;
+  border-style: solid;
+  background-color: var(--error-light);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 6px;
+}

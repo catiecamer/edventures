@@ -1,0 +1,14 @@
+<app-navbar> </app-navbar>
+<div class="container">
+  <div class="introText">
+    <p class="subheading">Welcome to Edventures.ai</p>
+    <h1>Unleash Your Business Brilliance: Quiz, Learn, Succeed!</h1>
+  </div>
+  <img src="../../../assets/images/landingPageImage.png" alt="" />
+  <div class="buttons">
+    <app-call-to-action routerLink="/categories">{{
+      QuizService.updateButtonText()
+    }}</app-call-to-action>
+    <button class="secondaryButton">Log in or sign up</button>
+  </div>
+</div>

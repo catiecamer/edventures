@@ -1,0 +1,20 @@
+<div *ngFor="let broadCat of broadCategories" class="broadCategory">
+  <div class="broadCategoryTitle">
+    <h2>
+      {{ broadCat.broadCategory }}
+    </h2>
+  </div>
+  <div
+    *ngFor="let specificCat of broadCat.specificCategory"
+    class="specificCategory"
+    (click)="selectCategory(specificCat, broadCat)"
+    routerLink="/question1"
+  >
+    <div class="questionsContainer">
+      <div class="questionsAmount">
+        <p>{{ specificCat.question }} questions</p>
+      </div>
+    </div>
+    <h4>{{ specificCat.title }}</h4>
+  </div>
+</div>

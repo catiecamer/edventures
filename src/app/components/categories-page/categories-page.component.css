@@ -1,0 +1,25 @@
+h1 {
+  font-family: "satoshi-medium";
+  font-size: 34px;
+  line-height: 41px;
+  color: var(--shades-black);
+  margin: 0;
+}
+
+p {
+  font-family: "generalSans-medium";
+  color: var(--neutral-700);
+  font-size: 13px;
+  line-height: var(--thirteen);
+}
+
+input {
+  width: calc(100% - 32px);
+  background-color: var(--neutral-100);
+  border-style: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+}
+.categoryintro {
+  padding: 40px 16px 0 16px;
+}

@@ -1,0 +1,5 @@
+<div class="isCorrect" *ngIf="QuizService.isCorrect">Correct! Keep it up!</div>
+<div class="isIncorrect" *ngIf="QuizService.isCorrect == false">
+  <p>Incorrect</p>
+  The correct answer is: {{ QuizService.answer }}
+</div>

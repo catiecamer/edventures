@@ -1,0 +1,27 @@
+.background {
+  background-color: var(--primary-blue-lighter);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh);
+  margin: 0 16px;
+}
+.category {
+  text-align: center;
+  color: var(--primary-blue-darker);
+  font-family: "generalSans-medium";
+  padding: 16px 0px 16px 0px;
+  line-height: var(--seventeen);
+  font-size: 17px;
+  margin: 0;
+  letter-spacing: 0.8px;
+}
+
+p {
+  color: var(--neutral-600);
+  font-family: "generalSans-medium";
+  padding: 16px 0px 16px 0px;
+  line-height: var(--fifteen);
+  font-size: 16px;
+  margin: 0;
+}

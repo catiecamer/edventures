@@ -1,0 +1,7 @@
+.question {
+  padding-top: 36px;
+  font-family: "generalSans-medium";
+  color: var(--primary-blue-darker);
+  font-size: 20px;
+  line-height: var(--twenty);
+}
