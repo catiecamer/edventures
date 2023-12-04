@@ -1,16 +1,28 @@
+.body {
+  display: flex;
+  justify-content: center;
+}
+
 .introText {
   margin: 0 0px 0 0px;
 }
 
+.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h1 {
-  color: var(--primary-blue-dark);
+  color: var(--primary-blue-darker);
   font-family: "satoshi-medium";
   font-size: 34px;
   line-height: var(--thirtyfour);
   margin: 0;
 }
 
-.subheading {
+.subheading,
+.edventuresMission {
   padding-top: 40px;
   color: var(--neutral-600);
   font-family: "generalSans-medium";
@@ -20,13 +32,26 @@ h1 {
   margin-bottom: 6px;
 }
 
-img {
+.edventuresMission {
+  font-size: 16px;
+  line-height: var(--sixteen);
+  padding: 32px 0 14px;
+}
+
+.mobileImage {
+  display: block;
   mix-blend-mode: darken;
   max-width: 90%;
+  max-height: 340px;
+  margin: auto;
+}
+
+.desktopImage {
+  mix-blend-mode: darken;
 }
 
 .secondaryButton {
-  border-radius: 16px;
+  border-radius: 12px;
   background-color: var(--primary-blue-lighter);
   margin: -12px 0px 30px 0px;
   /* padding:  */
@@ -44,17 +69,89 @@ img {
 .container {
   padding: 0 16px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   margin: 0px;
   height: calc(100vh - 48px);
   width: calc(100% - 32px);
   background-color: var(--primary-blue-lighter);
+  margin: auto;
 }
 
 .buttons {
   margin: 0;
   padding: 0;
   width: 100%;
+}
+
+@media screen and (min-width: 1240px) {
+  .mobileImage {
+    display: none;
+  }
+  .container {
+    margin: 0 200px;
+    flex-direction: row;
+    padding: 0;
+    height: auto;
+    margin-top: 64px;
+  }
+  .buttons {
+    display: flex;
+  }
+  .secondaryButton {
+    margin: 18px 0 30px 0;
+    padding: 0 32px;
+    width: auto;
+    margin-left: 16px;
+  }
+  app-call-to-action {
+    width: 209px;
+  }
+  .desktopImage {
+    width: 40%;
+    padding-left: 88px;
+  }
+
+  .left {
+    max-height: 400px;
+  }
+}
+
+@media screen and (min-width: 904px) and (max-width: 1239px) {
+  .mobileImage {
+    display: none;
+  }
+  .container {
+    width: 840px;
+    flex-direction: row;
+    padding: 0;
+    height: auto;
+    margin-top: 64px;
+  }
+  .buttons {
+    display: flex;
+  }
+  .secondaryButton {
+    margin: 18px 0 30px 0;
+    padding: 0 32px;
+    width: auto;
+    margin-left: 16px;
+  }
+  .desktopImage {
+    width: 40%;
+    padding-left: 16px;
+  }
+  .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 400px;
+  }
+}
+
+@media screen and (max-width: 903px) {
+  .desktopImage {
+    display: none;
+  }
+  .edventuresMission {
+    display: none;
+  }
 }

@@ -9,6 +9,9 @@ import { QuizService } from 'src/app/services/quiz.service';
 })
 export class FinalPageComponent {
   constructor(public router: Router, public QuizService: QuizService) {
-    this.QuizService.buttonDescriptionOnFinalResult();
+    this.QuizService.updateButtonText();
+  }
+  resetScore() {
+    this.QuizService.score = 0;
   }
 }

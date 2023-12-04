@@ -7,10 +7,10 @@
 
 .circle {
   position: absolute;
-  margin-top: calc(-112px / 2);
-  left: calc(50% - 128px / 2);
-  height: 128px;
-  width: 128px;
+  margin-top: calc(-110px / 2);
+  left: calc(50% - 120px / 2);
+  height: 120px;
+  width: 120px;
   border-radius: 120px;
   background-color: var(--primary-magenta-darker);
   box-shadow: 0px 15px 40px 5px rgb(128, 0, 128, 0.2);
@@ -20,22 +20,26 @@
 
 h2 {
   font-family: "generalSans-medium";
-  font-size: 22px;
-  line-height: var(--twentytwo);
-  padding-top: calc(128px / 2 + 24px);
+  font-size: 20px;
+  line-height: var(--twenty);
+  padding-top: calc(120px / 2 + 24px);
   text-align: center;
+  margin: 0;
 }
 
 .smallCards {
   display: flex;
   justify-content: space-between;
-  padding: 16px 8px 32px 8px;
+  padding: 16px 8px 16px 8px;
 }
 
 .smallCard {
   width: calc(32%);
   aspect-ratio: 1 / 1.2;
   border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .score {
@@ -107,8 +111,81 @@ img {
 .reviewQuestions {
   font-size: 17px;
   line-height: var(--seventeen);
-  padding: 0 16px 32px 16px;
-  text-decoration: underline;
+  padding: 0 8px 32px 16px;
   text-align: left;
-  color: var(--primary-blue-dark);
+  color: var(--primary-magenta);
+}
+
+@media screen and (min-width: 1240px) {
+  .desktop {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  .reviewQuestions {
+    text-align: center;
+  }
+  .smallCards {
+    padding: 8px 0 8px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .smallCard {
+    width: 164px;
+    margin: 8px;
+  }
+  h3 {
+    font-size: 34px;
+    line-height: var(--thirtyfour);
+  }
+  .coinsEarned h3 {
+    font-size: 28px;
+    line-height: var(--twentyeight);
+  }
+
+  p {
+    font-size: 17px;
+    line-height: var(--seventeen);
+    padding-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 904px) and (max-width: 1239px) {
+  .desktop {
+    flex-direction: column;
+    justify-content: flex-start;
+    margin: 0 auto;
+  }
+
+  .reviewQuestions {
+    text-align: center;
+  }
+
+  .smallCards {
+    padding: 8px 0 8px 0px;
+    display: flex;
+    justify-content: center;
+  }
+  .smallCard {
+    width: 164px;
+    margin: 8px;
+  }
+  h3 {
+    font-size: 34px;
+    line-height: var(--thirtyfour);
+  }
+  .coinsEarned h3 {
+    font-size: 28px;
+    line-height: var(--twentyeight);
+  }
+
+  p {
+    font-size: 17px;
+    line-height: var(--seventeen);
+    padding-bottom: 12px;
+  }
+}
+
+@media screen and (max-width: 903px) {
 }

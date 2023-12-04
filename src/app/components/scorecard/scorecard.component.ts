@@ -47,17 +47,14 @@ export class ScorecardComponent implements OnInit {
   }
 
   chooseLightColor() {
-    console.log(this.QuizService.percentage);
     for (let percent of this.percentage) {
       if (percent.scoreRule(this.QuizService.percentage)) {
-        console.log(percent.colorLight);
         return percent.colorLight;
       }
     }
   }
 
   chooseImg() {
-    console.log(this.QuizService.percentage);
     for (let percent of this.percentage) {
       if (percent.scoreRule(this.QuizService.percentage)) {
         return percent.img;
@@ -65,20 +62,15 @@ export class ScorecardComponent implements OnInit {
     }
   }
   chooseDarkColor() {
-    console.log(this.QuizService.percentage);
     for (let percent of this.percentage) {
       if (percent.scoreRule(this.QuizService.percentage)) {
-        console.log(percent.colorDark);
         return percent.colorDark;
       }
     }
   }
   chooseMessage() {
     for (let percent of this.percentage) {
-      console.log(this.QuizService.percentage, '%');
-      console.log(percent.scoreRule(this.QuizService.percentage));
       if (percent.scoreRule(this.QuizService.percentage)) {
-        console.log(percent.message);
         return percent.message;
       }
     }

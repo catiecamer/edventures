@@ -62,3 +62,30 @@ h2 {
   line-height: var(--twentytwo);
   padding-top: 8px;
 }
+
+@media screen and (min-width: 1240px) {
+  .specificCategory {
+    width: calc(0.25 * (100vw - 470px));
+    height: calc(0.25 * (100vw - 470px));
+  }
+  .questionsAmount {
+    font-size: 14px;
+    line-height: var(--fourteen);
+    margin: 8px;
+  }
+}
+
+@media screen and (min-width: 904px) and (max-width: 1239px) {
+  .specificCategory {
+    width: calc(0.25 * 776px);
+    height: calc(0.25 * 776px);
+  }
+  .questionsAmount {
+    font-size: 14px;
+    line-height: var(--fourteen);
+    margin: 8px;
+  }
+}
+
+@media screen and (max-width: 903px) {
+}

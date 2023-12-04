@@ -1,15 +1,22 @@
 .container {
-  min-width: calc(100vw - 32px);
-  min-height: calc(100vh - 48px);
+  width: 100%;
+  height: 100%;
   background: linear-gradient(
     var(--primary-magenta-dark),
     var(--primary-blue-dark)
   );
-  margin: 0;
-  padding: 0px 16px;
+  display: flex;
+  justify-content: center;
+}
+
+.container2 {
+  /* min-width: calc(100vw - 32px); */
+  min-height: calc(100vh - 48px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: 0;
+  padding: 0px 16px;
 }
 
 button {
@@ -28,7 +35,7 @@ button {
 }
 
 .quizTitles {
-  padding: 64px 16px 24px 16px;
+  padding: 16px 16px 16px 16px;
 }
 
 .broadCategory {
@@ -44,7 +51,78 @@ button {
   margin: 0;
   text-align: center;
   font-family: "satoshi-regular";
-  font-size: 28;
+  font-size: 28px;
   line-height: var(--twentyeight);
   color: var(--primary-magenta-lighter);
+}
+
+@media screen and (min-width: 1240px) {
+  .container {
+    background: var(--primary-blue-lighter);
+  }
+
+  .buttonsscorecard {
+    display: flex;
+  }
+  .container2 {
+    width: calc(100% - 400px);
+    height: calc(100% - 112px);
+    margin: 0 200px;
+    justify-content: flex-start;
+  }
+  .bottomhalf {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 9px;
+  }
+  button {
+    margin-top: 18px;
+    width: 240px;
+    padding: 0 32px;
+    margin-right: 8px;
+    border-color: var(--primary-blue-dark);
+    color: var(--primary-blue-darker);
+  }
+  .broadCategory {
+    color: var(--neutral-500);
+  }
+  .specificCategory {
+    color: var(--primary-blue-darker);
+  }
+}
+
+@media screen and (min-width: 904px) and (max-width: 1239px) {
+  .container {
+    background: var(--primary-blue-lighter);
+  }
+
+  .broadCategory {
+    color: var(--neutral-500);
+  }
+  .specificCategory {
+    color: var(--primary-blue-darker);
+  }
+
+  .container2 {
+    margin: auto;
+    width: 840px;
+    height: calc(100% - 112px);
+    justify-content: flex-start;
+  }
+  .bottomhalf {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 8px;
+  }
+  button {
+    margin-top: 18px;
+    width: 240px;
+    padding: 0 32px;
+    margin-right: 8px;
+    border-color: var(--primary-blue-dark);
+    color: var(--primary-blue-darker);
+  }
+}
+
+@media screen and (max-width: 903px) {
 }

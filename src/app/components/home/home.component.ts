@@ -7,7 +7,5 @@ import { QuizService } from 'src/app/services/quiz.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent {
-  constructor(public QuizService: QuizService) {
-    this.QuizService.buttonDescriptionOnHome();
-  }
+  constructor(public QuizService: QuizService) {}
 }

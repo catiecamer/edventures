@@ -1,7 +1,7 @@
+<app-navbar></app-navbar>
 <div class="background">
   <div class="topHalf">
     <a routerLink="/question1"></a>
-    <app-navbar></app-navbar>
     <p class="category">{{ QuizService.specificCategorySelected }}</p>
     <app-question></app-question>
     <p>Select one</p>
@@ -9,8 +9,10 @@
   </div>
   <div class="bottomHalf">
     <app-notification></app-notification>
-    <app-call-to-action
-      (click)="QuizService.showNotification()"
-    ></app-call-to-action>
+    <div class="button">
+      <app-call-to-action
+        (click)="QuizService.showNotification()"
+      ></app-call-to-action>
+    </div>
   </div>
 </div>

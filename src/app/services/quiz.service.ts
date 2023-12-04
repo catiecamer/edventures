@@ -22,7 +22,6 @@ export class QuizService {
   questionArray: Array<object> = { ...QuizData }.questions;
   totalQuestions: number = this.questionArray.length;
   questionNumber: number = 1;
-  click: number = 0;
   score: number = 0;
   percentage: number = (this.score / this.totalQuestions) * 100;
   check: boolean = false;
@@ -48,27 +47,11 @@ export class QuizService {
     this.answer = { ...QuizData }.questions[this.questionNumber - 1].answer;
   }
 
-  buttonDescriptionOnHome() {
-    if (this.location.path() === '/home') {
-      this.buttonText = 'Try out a quiz';
-    }
-  }
-
-  buttonDescriptionOnFinalResult() {
-    if (this.location.path() === '/finalresult') {
-      this.buttonText = 'Sign up to claim reward';
-    }
-  }
-
-  // onHomeClick() {
-  //   if (this.location.path() === '/home') {
-  //     this.buttonText = 'Try out a quiz';
-  //   }
-  // }
-
   updateButtonText() {
     if (this.location.path() === '/home') {
-      this.buttonText = 'Try out a quiz';
+      this.buttonText = 'Take a quiz';
+    } else if (this.location.path() === '/finalresult') {
+      this.buttonText = 'Sign up to claim reward';
     } else if (
       this.status != undefined &&
       this.questionNumber < this.questionArray.length &&
@@ -86,21 +69,18 @@ export class QuizService {
   }
 
   goToNextQuestion() {
-    if (this.check && this.click >= 2) {
+    if (!this.check) {
       this.questionNumber += 1;
       if (this.questionNumber > this.questionArray.length) {
         this.router.navigateByUrl('/finalresult');
         this.questionNumber = 1;
+        this.onQuestionNumber();
+        console.log(this.questionNumber);
       } else {
         this.onQuestionNumber();
       }
-      console.log('question number', this.questionNumber);
-      this.click = 0;
-      console.log('click', this.click);
       this.status = undefined;
       this.isCorrect = null;
-      this.check = false;
-      console.log('status', this.status);
     }
   }
 
@@ -118,15 +98,9 @@ export class QuizService {
       } else {
         this.isCorrect = false;
       }
-      this.check = true;
-      this.click += 1;
-      console.log('click', this.click);
+      this.check = !this.check;
       this.goToNextQuestion();
       this.updateButtonText();
-      console.log('check', this.check);
-      console.log('q number', this.questionNumber);
-      console.log('score', this.score);
-      console.log('length', this.totalQuestions);
       let percentage = (this.score / this.totalQuestions) * 100;
       this.percentage = percentage;
     }

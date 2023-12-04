@@ -1,21 +1,27 @@
 <app-navbar></app-navbar>
-
 <div class="container">
-  <div class="bottomhalf">
-    <div class="quizTitles">
-      <p class="broadCategory">
-        {{ QuizService.broadCategorySelected }}
-      </p>
-      <h1 class="specificCategory">
-        {{ QuizService.specificCategorySelected }}
-      </h1>
-    </div>
-    <app-scorecard></app-scorecard>
-  </div>
+  <div class="container2">
+    <div class="tophalf">
+      <div class="quizTitles">
+        <p class="broadCategory">
+          {{ QuizService.broadCategorySelected }}
+        </p>
+        <h1 class="specificCategory">
+          {{ QuizService.specificCategorySelected }}
+        </h1>
+      </div>
 
-  <div class="tophalf">
-    <app-call-to-action></app-call-to-action>
-    <button routerLink="/categories">Pick another category</button>
-    <button routerLink="/question1">Retake quiz</button>
+      <app-scorecard></app-scorecard>
+    </div>
+
+    <div class="bottomhalf">
+      <app-call-to-action></app-call-to-action>
+      <button (click)="resetScore()" routerLink="/categories">
+        Pick another category
+      </button>
+      <button (click)="resetScore()" routerLink="/question1">
+        Retake quiz
+      </button>
+    </div>
   </div>
 </div>

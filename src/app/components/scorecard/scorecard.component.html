@@ -3,31 +3,33 @@
     <img src="{{ chooseImg() }}" alt="result emoji" />
   </div>
   <h2>{{ chooseMessage() }}</h2>
-  <div class="smallCards">
-    <div
-      [ngStyle]="{ 'background-color': chooseLightColor() }"
-      class="percentage smallCard"
-    >
-      <div class="innerbox">
-        <h3 [ngStyle]="{ color: chooseDarkColor() }">
-          {{ QuizService.percentage }}%
-        </h3>
+  <div class="desktop">
+    <div class="smallCards">
+      <div
+        [ngStyle]="{ 'background-color': chooseLightColor() }"
+        class="percentage smallCard"
+      >
+        <div class="innerbox">
+          <h3 [ngStyle]="{ color: chooseDarkColor() }">
+            {{ QuizService.percentage }}%
+          </h3>
+        </div>
+        <p>Percentage</p>
       </div>
-      <p>Percentage</p>
-    </div>
-    <div class="score smallCard">
-      <div class="innerbox">
-        <h3>{{ QuizService.score }}/{{ QuizService.totalQuestions }}</h3>
+      <div class="score smallCard">
+        <div class="innerbox">
+          <h3>{{ QuizService.score }}/{{ QuizService.totalQuestions }}</h3>
+        </div>
+        <p>Score</p>
       </div>
-      <p>Score</p>
-    </div>
-    <div class="coinsEarned smallCard">
-      <div class="innerbox">
-        <img class="coins" src="../../../assets/images/coins.png" alt="" />
-        <h3>30</h3>
+      <div class="coinsEarned smallCard">
+        <div class="innerbox">
+          <img class="coins" src="../../../assets/images/coins.png" alt="" />
+          <h3>30</h3>
+        </div>
+        <p>Coins Earned</p>
       </div>
-      <p>Coins Earned</p>
     </div>
+    <p class="reviewQuestions">Review my answers</p>
   </div>
-  <p class="reviewQuestions">Review my answers</p>
 </div>

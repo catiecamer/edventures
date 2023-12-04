@@ -14,9 +14,7 @@ export class CategoriesComponent {
 
   selectCategory(specificCat: any, broadCat: any) {
     this.QuizService.specificCategorySelected = specificCat.title;
-    console.log(this.QuizService.specificCategorySelected);
     this.QuizService.broadCategorySelected =
       broadCat.broadCategory.toUpperCase();
-    console.log(this.QuizService.broadCategorySelected);
   }
 }

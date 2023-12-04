@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { CategoriesPageComponent } from './components/categories-page/categories-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'question1', component: QuizPageComponent },
   { path: 'question2', component: QuizPageComponent },
